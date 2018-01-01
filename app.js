@@ -16,8 +16,8 @@ server.listen(process.env.port || process.env.PORT || 3980, function () {
 
 // Create chat bot
 var connector = new builder.ChatConnector({
-    appId:conf.appId,
-    appPassword:conf.appPass
+    appId:conf.bot.appId,
+    appPassword:conf.bot.appPass
 });
 
 
