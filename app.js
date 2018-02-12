@@ -1,38 +1,35 @@
 var restify = require('restify');
 var builder = require('botbuilder');
+var botbuilder_mongo=require('botbuilder-mongodb')
 
-var istorage= require('./lib/IStorageClient');
-var azure = require('./lib/AzureBotStorage.js');
-var conf = require('./config/conf.js');
-
-//=========================================================
-// Bot Setup
-//=========================================================
-// Setup Restify Server
 var server = restify.createServer();
+//change port number here 
 server.listen(process.env.port || process.env.PORT || 3980, function () {
    console.log('%s listening to %s', server.name, server.url);
 });
 
 // Create chat bot
 var connector = new builder.ChatConnector({
-    appId:conf.bot.appId,
-    appPassword:conf.bot.appPass
+    appId:" ",//pass here your's app id
+    appPassword:" "//pass here your's app password
 });
-
-
 
 // Listen for messages from users 
 server.post('/api/messages', connector.listen());
-
-
 //Store session and context into mnongodb
-var docDbClient = new istorage.IStorageClient();
-var tableStorage = new azure.AzureBotStorage({ gzipData: false },docDbClient);
-var bot = new builder.UniversalBot(connector).set('storage', tableStorage);//set your storage here
+const mongoOptions = {
+    ip: '127.0.0.1',
+    port: '27017',
+    database: 'BotStorage',
+    collection: 'ContextData',
+    username: '',
+    password: '',
+    queryString: ''
+}
 
+mongoStorage=botbuilder_mongo.GetMongoDBLayer(mongoOptions)
+var bot = new builder.UniversalBot(connector).set('storage', mongoStorage);//set your storage here
 bot.use(builder.Middleware.dialogVersion({ version: 3.0, resetCommand: /^reset/i }));
-
 
 bot.dialog('/', [
     function (session, args, next) {
@@ -52,7 +49,6 @@ bot.dialog('/profile', [
         builder.Prompts.text(session, 'Hi! What is your name?');
     },
     function (session, results) {
-        console.log("results.response==>",results.response);
         session.userData.name = results.response;
         session.endDialog();
     }

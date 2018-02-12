@@ -1,0 +1,37 @@
+{
+  "name": "botbuilder-mongodb",
+  "version": "3.0.9",
+  "description": "Store Bot Session and User data into mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manacola/msbotframework-mongo-middlelayer.git"
+  },
+  "keywords": [
+    "Microsoft",
+    "Bot",
+    "Builder",
+    "MongoDb",
+    "Storage"
+  ],
+  "dependencies": {
+    "async": "^2.1.4",
+    "azure-storage": "^2.7.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "mongodb": "^3.0.1",
+    "promise": "^8.0.1",
+    "zlib": "^1.0.5",
+    "tedious": "^2.0.0",
+    "documentdb": "^1.13.0"
+  },
+  "author": "Aakash Kag <aakashkaginfo@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manacola/msbotframework-mongo-middlelayer/issues"
+  },
+  "homepage": "https://github.com/Manacola/msbotframework-mongo-middlelayer#readme"
+}
