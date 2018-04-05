@@ -7,7 +7,7 @@ Note:I changed code and put into npm directory.
 
 [https://www.npmjs.com/package/botbuilder-mongodb](https://www.npmjs.com/package/botbuilder-mongodb)
 
-npm install --save botbuilder-mongodb@3.0.9
+npm install --save botbuilder-mongodb@3.1.0
 
 You can find npm code into directory called npm_Code
 
