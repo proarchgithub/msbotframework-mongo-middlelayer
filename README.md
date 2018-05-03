@@ -7,7 +7,7 @@ Note:I changed code and put into npm directory.
 
 [https://www.npmjs.com/package/botbuilder-mongodb](https://www.npmjs.com/package/botbuilder-mongodb)
 
-npm install --save botbuilder-mongodb@3.1.0
+npm install --save botbuilder-mongodb@3.1.1
 
 You can find npm code into directory called npm_Code
 
@@ -25,8 +25,11 @@ So inorder to store session data into Mongo Db i implemented IstorageClient Inte
 
 ## How to use
 step 1)   First you need to install node js and npm
+
 step 2) > npm install 
+
 step 3) provide configuartion(MongoDb ip,Collection Name,Database name) on mongoOptions (Check app.js)
+
 Step 4) > node app.js (It will create collection automaticallly)
 
 Note:If you are testing bot other then Emulator, then app id and password will require.which you can set in app.js
