@@ -29,9 +29,9 @@ var MongoDbClient = (function () {
         var conditions = {
             'internal_id': partitionKey + ',' + rowKey
         };
-        if (rowKey !== "userData") {
-            entity = this.__substituteKeyDeep(entity, /\./g, '@');
-        }
+        //if (rowKey !== "userData") {
+            entity = this.__substituteKeyDeep(entity, /\./g, '\uff0e');
+        //}
         var update = {
             "$set": { "data": entity, "isCompressed": isCompressed }
         };
@@ -53,10 +53,10 @@ var MongoDbClient = (function () {
             }
             else {
                 var finaldoc = result[0];
-                if (rowKey !== "userData") {
-                    finaldoc = _this.__substituteKeyDeep(finaldoc, /\@/g, '.');
+                //if (rowKey !== "userData") {
+                    finaldoc = _this.__substituteKeyDeep(finaldoc, /\uff0e/g, '.');
                     finaldoc["id"] = id;
-                }
+                //}
                 callback(null, finaldoc, null);
             }
         });
