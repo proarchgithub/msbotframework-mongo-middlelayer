@@ -8,7 +8,7 @@ var MongoDbClient = (function () {
     MongoDbClient.prototype.initialize = function (callback) {
         var _this = this;
         var uri = "mongodb://" + this.options.ip + ":" + this.options.port + "/" + this.options.queryString;
-        var connectOptions = {};
+        var connectOptions = { useNewUrlParser: true };
         if (this.options.username && this.options.password) {
             connectOptions.auth = {};
             connectOptions.auth.user = this.options.username;
