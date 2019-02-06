@@ -1,7 +1,5 @@
-I created video  which demonstrate how You can store session and user data into mongo db 
+Video  which demonstrate how to store session, user data into MongoDB 
 Find here [https://youtu.be/S0oO81oG2GY](https://youtu.be/S0oO81oG2GY)
-
-Note:I changed code and put into npm directory.
 
 ##NPM
 
@@ -18,10 +16,8 @@ Bot builder with Mongo Db(custom storage )
 This example code is written to show how we can store our bot session data into MongoDb
 
 ## Motivation
-Microsoft bot builder bydefault store data  internally in Microsoft storage which have 64 Kb size limit per user.Other option to store data is Microsoft Azure Table and Microsoft Document Db.which doesn't have any data limit per user.
-Alternet solution is MongoDb.Installing mongdb in one server and storing our data in mongo db is much much chipper.
-So inorder to store session data into Mongo Db i implemented IstorageClient Interface.
-
+Microsoft bot builder on default stores data  internally in Microsoft storage which has a 64 Kb limit per user. Alternatively data can be stored to Microsoft Azure Table and Microsoft Cosmos DB (formerly Microsoft Document Db) which do not have any data limit per user.
+An opensource custom solution is to use MongoDB as storage layer for the same.
 
 ## How to use
 step 1)   First you need to install node js and npm
@@ -32,7 +28,7 @@ step 3) provide configuartion(MongoDb ip,Collection Name,Database name) on mongo
 
 Step 4) > node app.js (It will create collection automaticallly)
 
-Note:If you are testing bot other then Emulator, then app id and password will require.which you can set in app.js
+Note:If you are testing bot in an environment other than the Emulator, then App ID and Password is required. This can be set in app.js of the application.
 
 
 ## Reference Link:
