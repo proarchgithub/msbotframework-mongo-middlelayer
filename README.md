@@ -1,4 +1,5 @@
 How to video [https://youtu.be/S0oO81oG2GY](https://youtu.be/S0oO81oG2GY)
+
 Note: This video was recored using version 1 and is a little out of date. 
 
 ##NPM
@@ -21,8 +22,11 @@ An opensource custom solution is to use MongoDB as storage layer for the same.
 
 ## Setup
 1) Install node js and npm
+
 2) > npm install 
+
 3) provide configuartion(MongoDb IP address, collection name, database name) on mongoOptions (Check app.js)
+
 4) > node app.js (It will create the collection automaticallly)
 
 Note:If you are testing your bot in an environment other than the Emulator, then App ID and Password is required. This can be set in app.js of the application.
