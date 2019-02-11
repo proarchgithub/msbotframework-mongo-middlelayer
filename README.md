@@ -1,16 +1,16 @@
-How to video [https://youtu.be/S0oO81oG2GY](https://youtu.be/S0oO81oG2GY)
+## How to video
+[https://youtu.be/S0oO81oG2GY](https://youtu.be/S0oO81oG2GY)
 
 Note: This video was recored using version 1 and is a little out of date. 
 
-##NPM
-
+## NPM
 [https://www.npmjs.com/package/botbuilder-mongodb](https://www.npmjs.com/package/botbuilder-mongodb)
 
 npm install --save botbuilder-mongodb@3.1.1
 
 You can find npm code into directory called npm_Code
 
-##BotBuilder-MongoDB
+## BotBuilder-MongoDB
 Bot builder with Mongo Db custom storage
 
 ## Introduction 
