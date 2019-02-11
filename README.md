@@ -1,3 +1,7 @@
+
+## BotBuilder-MongoDB
+Bot builder with Mongo Db custom storage
+
 ## How to video
 [https://youtu.be/S0oO81oG2GY](https://youtu.be/S0oO81oG2GY)
 
@@ -9,9 +13,6 @@ Note: This video was recored using version 1 and is a little out of date.
 npm install --save botbuilder-mongodb@3.1.1
 
 You can find npm code into directory called npm_Code
-
-## BotBuilder-MongoDB
-Bot builder with Mongo Db custom storage
 
 ## Introduction 
 The example code shows how you can store bot session and user data into MongoDB
